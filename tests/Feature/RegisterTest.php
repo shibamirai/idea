@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Auth;
+
 use function Pest\Laravel\assertAuthenticated;
 
 it('registers a user', function () {
@@ -26,5 +27,4 @@ it('requires a valid email', function () {
         ->fill('password', 'password123!@#')
         ->click('Create Account')
         ->assertPathIs('/register');
-
 });
