@@ -9,6 +9,7 @@
                 @click="$dispatch('open-modal', 'create-idea')"
                 is="button"
                 type="button"
+                data-test="create-idea-button"
                 class="mt-10 cursor-pointer h-32 w-full text-left"
             >
                 <p>What's the idea?</p>
@@ -71,6 +72,7 @@
                                 <button
                                     type="button"
                                     @click="status = @js($status->value)"
+                                    data-test="button-status-{{ $status->value }}"
                                     class="btn flex-1 h-10"
                                     :class="{'btn-outlined': status !== @js($status->value)}"
                                 >
