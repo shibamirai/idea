@@ -1,4 +1,16 @@
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-lincap="round" stroke-linejoin="round" role="img" aria-label="Close">
+<svg
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-lincap="round"
+    stroke-linejoin="round"
+    role="img"
+    aria-label="Close"
+    {{ $attributes }}
+>
     <path d="M18 6 6 18"></path>
     <path d="m6 6 12 12"></path>
 </svg>
