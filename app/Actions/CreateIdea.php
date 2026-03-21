@@ -26,7 +26,7 @@ class CreateIdea
             $data['image_path'] = $attributes['image']->store('ideas', 'public');
         }
 
-        DB::transaction(function () use ($data) {
+        DB::transaction(function () use ($data, $attributes) {
             $idea = $this->user->ideas()->create($data);
 
             $steps = collect($attributes['steps'] ?? [])->map(fn ($step) => ['description' => $step]);
