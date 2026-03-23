@@ -9,7 +9,7 @@ it('shows the initial state', function () {
     actingAs($user = User::factory()->create());
 
     $idea = Idea::factory()->for($user)->create();
-    
+
     visit(route('idea.show', $idea))
         ->click('@edit-idea-button')
         ->assertValue('title', $idea->title)
@@ -21,7 +21,7 @@ it('edit an existing idea', function () {
     actingAs($user = User::factory()->create());
 
     $idea = Idea::factory()->for($user)->create();
-    
+
     visit(route('idea.show', $idea))
         ->click('@edit-idea-button')
         ->fill('title', 'Some Example Title')

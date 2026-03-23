@@ -6,7 +6,6 @@ namespace App\Actions;
 
 use App\Models\User;
 use Illuminate\Container\Attributes\CurrentUser;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class CreateIdea
