@@ -8,6 +8,8 @@
 
         <div class="flex gap-x-5 items-center">
             @auth
+                <a href="{{ route('profile.edit') }}">Edit Profile</a>
+
                 <form method="POST" action="/logout">
                     @csrf
 
@@ -16,8 +18,8 @@
             @endauth
 
             @guest
-            <a href="/login">Sign In</a>
-            <a href="/register" class="btn">Register</a>
+                <a href="/login">Sign In</a>
+                <a href="/register" class="btn">Register</a>
             @endguest
         </div>
     </div>
