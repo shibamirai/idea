@@ -13,12 +13,13 @@ it('logs in a user', function () {
         ->fill('email', $user->email)
         ->fill('password', 'password123!@#')
         ->click('@login-button')
-        ->assertPathIs('/');
+        ->assertRoute('idea.index');
 
     assertAuthenticated();
 });
 
 it('logs out a user', function () {
+    /** @var User */
     $user = User::factory()->create();
 
     actingAs($user);
